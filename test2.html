@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/test2.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <title>test2</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+
+        <div id="append_df" style="display: none;"></div>
+        <button id="cancelTarifForm" type="button" class="btn btn-default">CancelChanges</button>
+        <button id="submitTarifForm" class="btn btn-primary" type="submit">SaveTarif</button>
+        </form>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+            Launch static backdrop modal
+        </button>
+////////////
+        <form class="form-horizontal fv-form fv-form-bootstrap" id="editTarifForm" action="#">
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                       aria-controls="home" aria-selected="true">All</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                       aria-controls="profile" aria-selected="false">Mobail</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                     aria-labelledby="home-tab">
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">ShortName</label>
+                                        <div class="col-xs-9">
+                                            <input type="text" name="short_name" id="short_name" class="form-control"
+                                                   placeholder="name"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">Provider</label>
+                                        <div class="col-xs-9">
+                                            <select required class="form-control selectpicker" name="tarif_provider"
+                                                    id="tarif_provider" title="Select Type...">
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">Filter</label>
+                                        <div class="col-xs-9">
+                                            <select required class="form-control selectpicker" name="tarif_filter"
+                                                    id="tarif_filter" title="Select Type...">
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">ConnectType</label>
+                                        <div class="col-xs-9">
+                                            <select required class="form-control selectpicker" name="connect_type"
+                                                    id="connect_type" title="Select Type...">
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">Speed</label>
+                                        <div class="col-xs-9">
+                                            <select required class="form-control selectpicker" name="tarif_speed"
+                                                    id="tarif_speed" title="Select Type...">
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">IPTV</label>
+                                        <div class="col-xs-9">
+                                            <select required class="form-control selectpicker" name="tarif_iptv"
+                                                    id="tarif_iptv" title="Select Type...">
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">IPTVPacket</label>
+                                        <div class="col-xs-9">
+                                            <select required class="form-control selectpicker" name="iptv_packet"
+                                                    id="iptv_packet" title="Select Type...">
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">VoIP</label>
+                                        <div class="col-xs-9">
+                                            <select required class="form-control selectpicker" name="tarif_voip"
+                                                    id="tarif_voip" title="Select Type...">
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">Public IP</label>
+                                        <div class="col-xs-9">
+                                            <select required class="form-control selectpicker" name="public_ip"
+                                                    id="public_ip" title="Select Type...">
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">VideoCamera</label>
+                                        <div class="col-xs-9">
+                                            <select required class="form-control selectpicker" name="video_camera"
+                                                    id="video_camera" title="Select Type...">
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">VideoDays</label>
+                                        <div class="col-xs-9">
+                                            <select required class="form-control selectpicker" name="video_days"
+                                                    id="video_days" title="Select Type...">
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">Group</label>
+                                        <div class="col-xs-9">
+                                            <select required class="form-control selectpicker" name="tarif_group"
+                                                    id="tarif_group" title="Select Type...">
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">PaidType</label>
+                                        <div class="col-xs-9">
+                                            <select required class="form-control selectpicker" name="tarif_paid"
+                                                    id="tarif_paid" title="Select Type...">
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label"></label>
+                                        <label class="form-check-label" for="turbo_speed">Night Speed:</label>
+                                        <input type="checkbox" name="turbo_speed" id="turbo_speed" value="1"/>
+                                        <label class="form-check-label" for="visible_status">Visible:</label>
+                                        <input type="checkbox" name="visible_status" id="visible_status" value="1"/>
+                                        <label class="form-check-label" for="mobile_show">Show in Mobile:</label>
+                                        <input type="checkbox" name="mobile_show" id="mobile_show" value="1"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">Price</label>
+                                        <div class="col-xs-9">
+                                            <input type="text" name="tarif_price" id="tarif_price" class="form-control"
+                                                   placeholder="price"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label" for="mobile_name">MobileName</label>
+                                        <div class="col-xs-9">
+                                            <input type="text" name="mobile_name" id="mobile_name" class="form-control" placeholder="name"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label" for="mobile_dsc">Mobile Description</label>
+                                        <div class="col-xs-9">
+                                            <textarea class="form-control" rows="5" name="mobile_dsc" id="mobile_dsc"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label" for="mobile_type">Mobile Type</label>
+                                        <div class="col-xs-9">
+                                            <select class="form-control selectpicker" name="mobile_type" id="mobile_type" title="Select Type...">
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label" for="mobile_type">Mobile City</label>
+                                        <div class="col-xs-9">
+                                            <select class="form-control selectpicker" name="mobile_city_id" id="mobile_city_id"
+                                                    title="Select City..." multiple>
+                                                <!-- get json -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div> <!-- row end-->
+</div><!-- container end-->
+
+
+</body>
+<script>
+
+
+</script>
+</html>
